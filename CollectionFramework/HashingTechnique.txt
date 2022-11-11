@@ -1,0 +1,48 @@
+Hashing is a technique used for mapping values to the key, which makes it easy to retrieve values by just entering the key.
+
+Hash function is used to calculate a unique key for each piece of data, which is then used to retrieve the data.
+
+Hash functions are designed to be fast, so that data can be quickly accessed.
+They are also designed to be collision resistant, so that two different pieces of data do not have the same key.
+
+Eg. We have an array nums of size 10
+
+    int[] nums = new int[10];    (Suppose this is HashTable)
+
+    We need to store - 23, 44, 51, 71, 86,......
+
+    We use Hash Function to generate key(index) and store value.
+
+    HashFunction in this case would be - f(x) = x mod 10  (as 10 is the size of array nums)
+
+    To store first element 23 - Key(Index) = 23 mod 10  = 3   --> stored at index 3
+    To store first element 44 - Key(Index) = 44 mod 10  = 4   --> stored at index 4
+    To store first element 51 - Key(Index) = 51 mod 10  = 1   --> stored at index 1
+    To store first element 71 - Key(Index) = 71 mod 10  = 1   --> stored at index 1
+    To store first element 86 - Key(Index) = 86 mod 10  = 6   --> stored at index 6
+    To store first element 26 - Key(Index) = 26 mod 10  = 6   --> stored at index 6
+
+
+    But 51 and 71 have same key(index). This condition is called 'Hash Collision'.
+
+    Hash Collision can be handled using multiple methods -
+
+    i) Using Open Addressing :-
+
+    In Open Addressing, since 51 has already occupied index 1 so 71 we be stored in next open ie empty index which will be 2 in this case as no
+    element has been added to array at index 2 yet.
+    Similarly, as 86 is stored at index 6, 26 will be stored at next open index ie 7.
+
+    ii) Using Chaining (uses LinkedList) -
+
+    Since 51 and 71 have same index we point index 2 towards a LinkedList which contains 51 and 71.
+    Similarly, 86 and 26 have same index 6 hence index 6 which points towards a LinkedList which contains 86 and 26.
+
+HashSet, HashMap, LinkedHashSet, HashTable are the classes which use Hashing Technique.
+
+When the size of HashTable is not sufficient to store elements, the elements are copied to other larger HashTable and remaining elements are then added.
+
+Load Factor - It is a measure of how full the Hash Table is allowed to be before its capacity can be increased.
+
+
+

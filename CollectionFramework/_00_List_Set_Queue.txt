@@ -1,0 +1,17 @@
+Comparison between List, Set, and Queue in Java :
+
+Difference between above 3 :-
+I) ORDER -
+(1)List:-Insertion order is maintained
+(2)Set:-In Set Insertion order is not maintained
+(3)Queue:-In queue Insertion order is maintained.
+
+II) DUPLICATE ELEMENTS -
+(1)List:- Can contain duplicate elements
+(2)Set:- Cannot have duplicate elements
+(3)Queue:- Can have duplicate elements
+
+III) INSERTION AND REMOVAL -
+(1)List:-Insertion and removing of can be done using index.
+(2)Set:- We can remove the specified element.
+(3)Queue:- We can remove on last inserted element. Also, insertion of elements happens at end.
